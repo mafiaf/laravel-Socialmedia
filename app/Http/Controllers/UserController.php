@@ -1,6 +1,7 @@
 <?php
 namespace App\http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -16,12 +17,12 @@ class UserController extends Controller
     $user->first_name = $first_name;
     $user->password = $password;
 
-    $user-> $save();
+    $user->save();
 
     return redirect()->back();
   }
 
-  public function postSignIn(Request $request);
+  public function postSignIn(Request $request)
   {
 
   }
