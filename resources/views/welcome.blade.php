@@ -3,18 +3,8 @@
 @section('title')
   welcome!
 @endsection
-
+  @include('includes.message-block')
 @section('content')
-  @if(count($errors) > 0)
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <ul>
-            @foreach($errors->all() as $error)
-              <li>{{$error}}</li>
-            @endforeach
-      </ul>
-    </div>
-  @endif
   <div class="row">
     <div class="col-md-6">
       <h3>Sign Up</h3>
