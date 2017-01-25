@@ -28,13 +28,13 @@ class PostController extends Controller
        //giving back the message
     }
 
-    public function getDeletePost($post_id)
-    {
+      public function getDeletePost($post_id)
+      {
         $post = Post::where('id', $post_id)->first();
         if (Auth::user() != $post->user) {
-            return redirect()->back();
+          return redirect()->back();
         }
         $post->delete();
         return redirect()->route('dashboard')->with(['message' => 'Successfully deleted!']);
-    }
+      }
 }
